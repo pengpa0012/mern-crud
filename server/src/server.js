@@ -31,7 +31,7 @@ mongoose.connect(`${dbConfig}/${dbName}`, {
   useUnifiedTopology: true
 })
 
-const port = process.env.PORT
+const port = process.env.PORT || 3001
 
 app.listen(port, () => {
   console.log("listening on port ", port)
