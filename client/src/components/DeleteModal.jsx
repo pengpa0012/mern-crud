@@ -7,7 +7,7 @@ const DeleteModal = ({ setShowDeleteModal, showDeleteModal, id, fetchAllUsers })
     console.log(id)
     axios({
       method: 'POST',
-      url: `http://localhost:3001/users/deleteUser`,
+      url: `${import.meta.env.VITE_ENDPOINT}/users/deleteUser`,
       data: {
         id
       }

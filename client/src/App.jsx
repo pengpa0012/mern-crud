@@ -17,7 +17,7 @@ function App() {
   },[])
 
   const fetchAllUsers = () => {
-    axios.get(`http://localhost:3001/users/getAllUsers`)
+    axios.get(`${import.meta.env.VITE_ENDPOINT}/users/getAllUsers`)
     .then(res => setAllUsers(res.data))
     .catch(console.error)
   }
@@ -30,7 +30,7 @@ function App() {
     
     axios({
       method: 'POST',
-      url: `http://localhost:3001/users/${update ? "updateUser" : "createUser"}`,
+      url: `${import.meta.env.VITE_ENDPOINT}/users/${update ? "updateUser" : "createUser"}`,
       data: {
         id: update ? updateUser._id : undefined,
         username,
