@@ -4,11 +4,11 @@ const router = express.Router()
 
 router.get("/getAllUsers", async (req, res) => {
   // const result = await getAllUsers()
-  return {message: "test response"}
+  return res.status(200).send({message: "Hello"})
 
-  if(result) {
-    res.status(200).send(result)
-  } else res.status(500).send({message: "error"})
+  // if(result) {
+  //   res.status(200).send(result)
+  // } else res.status(500).send({message: "error"})
 })
 
 router.post("/createUser", async (req, res) => {
