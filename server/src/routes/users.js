@@ -4,6 +4,7 @@ const router = express.Router()
 
 router.get("/getAllUsers", async (req, res) => {
   const result = await getAllUsers()
+  return {message: "test response"}
 
   if(result) {
     res.status(200).send(result)
