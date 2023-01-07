@@ -3,7 +3,7 @@ const { getAllUsers, createUser, updateUser, deleteUser } = require("../services
 const router = express.Router()
 
 router.get("/getAllUsers", async (req, res) => {
-  const result = await getAllUsers()
+  // const result = await getAllUsers()
   return {message: "test response"}
 
   if(result) {
